@@ -44,16 +44,17 @@ async def on_ready():
 
 @client.event
 async def on_member_join(member):
-    await member.create_dm()
-    await member.dm_channel.send(
-        f'Ola {member.name}, bem vindo ao XorumisHouse !'
+    await client.get_channel('876544266254561370').send(f"Bem vindo ao {member.guild.name} {member.mention} .")
+    await member.add_roles(*(member.guild.get_role(id_) for id_ in (693615866612547645)))
+ #   await member.create_dm()
+ #   await member.dm_channel.send(
+ #       f'Ola {member.name}, bem vindo ao XorumisHouse !'
     )
 
 @client.event
 async def on_message(message):
     if message.author == client.user:
         return
-
     if message.content == '!ola':
         await message.channel.send('Ola eu sou o FraaaankyBot a seu dispor!')
 
