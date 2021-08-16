@@ -63,6 +63,10 @@ async def salve(ctx):
 async def funcaovazia(ctx):
         await ctx.send('Eu não tenho funcao nenhuma, culpa do Hiroshime que me fez assim!')
 
+@bot.command(name='teste', help='Nao faz literalmente nada')
+async def funcaoteste(ctx):
+        await ctx.send('Seu teste rolou')
+
 @bot.event
 async def on_command_error(ctx, error):
     if isinstance(error, CommandNotFound):
