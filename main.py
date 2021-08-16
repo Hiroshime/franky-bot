@@ -51,16 +51,26 @@ async def on_member_join(member):
  #       f'Ola {member.name}, bem vindo ao XorumisHouse !'
     )
 
-@client.event
-async def on_message(message):
-    if message.author == client.user:
-        return
-    if message.content == '!ola':
-        await message.channel.send('Ola eu sou o FraaaankyBot a seu dispor!')
+bot = commands.Bot(command_prefix='!')
 
-    if message.content == '!funcao':
-        await message.channel.send('Eu não tenho funcao nenhuma, culpa do Hiroshime que me fez assim!')
-    if message.content == '!clima':
-        await message.channel.send(get_city_weather(4008))
+@bot.command(name='salve', help='Responde seu salve')
+async def salve(ctx):
+        await ctx.send('SALVE. Eu sou o FraaaaankyBot a seu dispor.')
+
+@bot.command(name='funcao', help='Nao faz literalmente nada')
+async def funcaovazia(ctx):
+        await ctx.send('Eu não tenho funcao nenhuma, culpa do Hiroshime que me fez assim!')
+
+#@client.event
+#async def on_message(message):
+##    if message.author == client.user:
+#        return
+#    if message.content == '!ola':
+#        await message.channel.send('Ola eu sou o FraaaankyBot a seu dispor!')#
+#
+#    if message.content == '!funcao':
+#        await message.channel.send('Eu não tenho funcao nenhuma, culpa do Hiroshime que me fez assim!')
+#    if message.content == '!clima':
+#        await message.channel.send(get_city_weather(4008))
 
 client.run(TOKEN)
