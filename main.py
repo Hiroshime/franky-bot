@@ -50,7 +50,7 @@ async def on_member_join(member):
  #   await member.create_dm()
  #   await member.dm_channel.send(
  #       f'Ola {member.name}, bem vindo ao XorumisHouse !'
-    )
+ #  )
 
 bot = commands.Bot(command_prefix='!')
 
@@ -74,4 +74,4 @@ async def funcaovazia(ctx):
 #    if message.content == '!clima':
 #        await message.channel.send(get_city_weather(4008))
 
-client.run(TOKEN)
+bot.run(TOKEN)
