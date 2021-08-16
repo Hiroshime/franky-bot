@@ -7,6 +7,7 @@ import discord
 import json
 from dotenv import load_dotenv
 from discord.ext import commands
+from discord.ext.commands import CommandNotFound
 
 load_dotenv()
 TOKEN = os.getenv('DISCORD_TOKEN')
@@ -61,6 +62,12 @@ async def salve(ctx):
 @bot.command(name='funcao', help='Nao faz literalmente nada')
 async def funcaovazia(ctx):
         await ctx.send('Eu não tenho funcao nenhuma, culpa do Hiroshime que me fez assim!')
+
+@bot.event
+async def on_command_error(ctx, error):
+    if isinstance(error, CommandNotFound):
+        await ctx.send('Este comando ainda não esta disponivel.')
+ 
 
 #@client.event
 #async def on_message(message):
