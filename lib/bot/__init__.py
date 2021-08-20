@@ -17,13 +17,13 @@ class Bot(BotBase):
         self.scheduler =  AsysncIOScheduler()
         super().__init__(
             commands_prefix=PREFIX,
-            owner_ids=OWNER_IDS
-            intents=Intents.all()
+            owner_ids=OWNER_IDS,
+            intents = Intents.all()
             )
 
     def setup(self):
         for cog in COGS:
-            self.load_extension(/"lib.cogs.{cog}")
+            self.load_extension(f"lib.cogs.{cog}")
             print(f"{cog} cog loaded")
 
         print("setup completo")
