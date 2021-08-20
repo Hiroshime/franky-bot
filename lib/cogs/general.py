@@ -1,6 +1,7 @@
 from discord.ext.commands import Cog
 from discord import Member
 from discord.ext.commands import command
+from typing import Optional
 
 class General(Cog):
     def __init__(self,bot):

@@ -3,3 +3,4 @@ python-dotenv
 urllib3
 random2
 APScheduler
+typing
