@@ -5,7 +5,7 @@ from glob import glob
 
 PREFIX = "+"
 OWNER_IDS = []
-COGS = [path.split("\\")[-1][:-3] for path in glob("./lib/cogs/*.py")]
+COGS = [path.split("\\")[-1][:-3] for path in glob("../cogs/*.py")]
 
 
 class Bot(BotBase):
@@ -25,7 +25,7 @@ class Bot(BotBase):
 
     def run(self, version):
         self.VERSION = version
-        with open("./lib/bot/token.0", "r", encoding="utf-8") as tf:
+        with open("./token.0", "r", encoding="utf-8") as tf:
             self.TOKEN = tf.read()
 
         print("rodando o bot...")
