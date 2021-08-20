@@ -1,6 +1,6 @@
 from discord import Intents
 from discord.ext.commands import Bot as BotBase
-from apscheduler.schedulers.asyncio import AsysncIOScheduler
+from apscheduler.schedulers.asyncio import AsyncIOScheduler
 from glob import glob
 
 PREFIX = "+"
