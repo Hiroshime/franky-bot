@@ -1,4 +1,3 @@
-from _typeshed import Self
 from discord import Intents
 from discord.ext.commands import Bot as BotBase
 from apscheduler.schedulers.asyncio import AsysncIOScheduler
