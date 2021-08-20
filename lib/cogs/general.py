@@ -24,6 +24,5 @@ class General(Cog):
         if not self.bot.ready:
             self.bot.corgs_ready.ready_up("general")
 
-
-    def setup(bot):
-        bot.add_cog(General(bot))
+def setup(bot):
+    bot.add_cog(General(bot))
