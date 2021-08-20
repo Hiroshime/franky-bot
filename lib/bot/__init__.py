@@ -5,7 +5,7 @@ from glob import glob
 
 PREFIX = "+"
 OWNER_IDS = []
-COGS = [path.split("\\")[-1][:-3] for path in glob("/app/franky-bot/lib/cogs/*.py")]
+COGS = ["general"]
 
 
 class Bot(BotBase):
@@ -42,8 +42,8 @@ class Bot(BotBase):
         if not self.ready:
             self.ready = True
             print("Bot pronto")
-            channel = self.get_channel(760971404450856991)
-            await  channel.send("Frannky....Onlinee!")
+#            channel = self.get_channel(760971404450856991)
+#            await  channel.send("Frannky....Onlinee!")
         else:
             print("Bot reconectado")
 
