@@ -13,7 +13,7 @@ class Bot(BotBase):
         self.PREFIX = PREFIX
         self.ready = False
         self.guild = None
-        self.scheduler =  AsysncIOScheduler()
+        self.scheduler =  AsyncIOScheduler()
         super().__init__(
             commands_prefix=PREFIX,
             owner_ids=OWNER_IDS,
