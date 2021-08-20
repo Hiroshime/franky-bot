@@ -8,6 +8,18 @@ OWNER_IDS = []
 COGS = ["general"]
 
 
+class Ready(object):
+	def __init__(self):
+		for cog in COGS:
+			setattr(self, cog, False)
+
+	def ready_up(self, cog):
+		setattr(self, cog, True)
+		print(f" {cog} cog ready")
+
+	def all_ready(self):
+		return all([getattr(self, cog) for cog in COGS])
+
 class Bot(BotBase):
     def __init__(self):
         self.PREFIX = PREFIX
@@ -26,6 +38,9 @@ class Bot(BotBase):
 
     def run(self, version):
         self.VERSION = version
+        print("running setup...")
+        self.setup()
+
         with open("/app/franky-bot/lib/bot/token.0", "r", encoding="utf-8") as tf:
             self.TOKEN = tf.read()
 
