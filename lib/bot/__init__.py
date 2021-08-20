@@ -17,6 +17,7 @@ class Bot(BotBase):
         super().__init__(command_prefix=PREFIX,owner_ids=OWNER_IDS,intents=Intents.all())
 
     def setup(self):
+        print(f"{COGS} passei aqui")
         for cog in COGS:
             self.load_extension(f"lib.cogs.{cog}")
             print(f"{cog} cog loaded")
