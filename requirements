@@ -4,3 +4,4 @@ urllib3
 random2
 types-six
 types-requests
+typeshed
