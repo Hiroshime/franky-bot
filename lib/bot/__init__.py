@@ -14,11 +14,7 @@ class Bot(BotBase):
         self.ready = False
         self.guild = None
         self.scheduler =  AsyncIOScheduler()
-        super().__init__(
-            commands_prefix=PREFIX,
-            owner_ids=OWNER_IDS,
-            intents = Intents.all()
-            )
+        super().__init__(commands_prefix=PREFIX,owner_ids=OWNER_IDS,intents=Intents.all())
 
     def setup(self):
         for cog in COGS:
