@@ -7,10 +7,6 @@ class General(Cog):
     def __init__(self,bot):
         self.bot = bot
 
-    @command(name="salve")
-    async def salve(self, ctx):
-        await ctx.send(f"SALVEE {ctx.author.mention}! Eu sou o FraaaaankyBot a seu dispor.")
-
     @command(name="funcao")
     async def salve(self, ctx):
         await ctx.send(f"Eu não tenho funcao nenhuma, culpa do Hiroshime que me fez assim!")
@@ -18,6 +14,10 @@ class General(Cog):
     @command(name="tapa")
     async def tapa(self, ctx, member: Member, *, reason: Optional[str] = "sem razao aparente"):
         await ctx.send(f"{ctx.author.display_name} mandou um tapa bem na cara do {member.mention} {reason}!" )
+            
+    @command(name="salve")
+    async def salve(self, ctx):
+        await ctx.send(f"SALVEE {ctx.author.mention}! Eu sou o FraaaaankyBot a seu dispor.")
 
     @Cog.listener()
     async def on_ready(self):
